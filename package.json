@@ -4,14 +4,43 @@
     "build": "turbo run build",
     "dev": "turbo run dev",
     "lint": "turbo run lint",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "commit": "cz",
+    "precommit": "yarn husky install && yarn lint && yarn build"
   },
   "devDependencies": {
-    "eslint": "^8.48.0",
-    "prettier": "^3.0.3",
+    "@dev/commitizen-config-custom": "*",
+    "commitizen": "~4.3.0",
+    "eslint": "~8.48.0",
+    "husky": "~8.0.3",
+    "prettier": "~3.0.3",
     "tsconfig": "workspace:*",
     "turbo": "latest"
   },
   "packageManager": "pnpm@8.6.10",
-  "name": "fe-repo"
+  "engines": {
+    "node": ">=20.9.0",
+    "pnpm": ">=8.10.2"
+  },
+  "resolutions": {
+    "@types/react": "~18.0.0"
+  },
+  "workspaces": [
+    "apps/*",
+    "packages/**/*"
+  ],
+  "config": {
+    "commitizen": {
+      "path": "@dev/commitizen-config-custom"
+    },
+    "commitlint": {},
+    "prettier": {
+      "semi": false,
+      "singleQuote": true,
+      "trailingComma": "es5",
+      "endOfLine": "lf",
+      "printWidth": 80,
+      "tabWidth": 4
+    }
+  }
 }
