@@ -1,0 +1,14 @@
+{
+  "name": "@dev/commitizen-config-custom",
+  "version": "0.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "@digitalroute/cz-conventional-changelog-for-jira": "~8.0.1",
+    "commitizen": "~4.3.0",
+    "lodash": "~4.17.21"
+  }
+}
