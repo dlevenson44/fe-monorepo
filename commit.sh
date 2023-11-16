@@ -30,15 +30,22 @@ else
 fi
 
 # Check if user needs snapshot build
-read -p "Generate snapshot build (y/n): " generate_snapshot
-echo $generate_snapshot
+read -p "Generate snapshot build (y/n): " generate_snapshot_build
 
 # Execute snapshot build based on user input
 shopt -s nocasematch
-if [[ $generate_snapshot == "y" ]] ;
+if [[ $generate_snapshot_build == "y" ]] ;
 then
   echo "generating snapshot version..."
   pnpm changeset version --snapshot
+fi
+
+# Check if user needs Prod build
+read -p "Generate Prod build (y/n): " generate_prod_build
+if [[ $generate_prod_build == "y" ]] ;
+then
+  echo "generating prod version..."
+  pnpm changeset version
 fi
 
 # lint, test (when added), build, commit
