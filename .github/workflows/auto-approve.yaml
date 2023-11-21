@@ -5,7 +5,8 @@ on: pull_request
 jobs:
   auto-approve:
     runs-on: ubuntu-latest
-    permissions: write-all
+    permissions: 
+      pull-requests: write
     if: github.actor == 'dlevenson44'
     steps:
       - uses: hmarr/auto-approve-action@v3
