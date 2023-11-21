@@ -10,16 +10,14 @@ jobs:
     - name: Check out the code
       uses: actions/checkout@v2
 
-    - name: Auto-approve PR from dlevenson44
+    - name: Auto approve
+      uses: hmarr/auto-approve-action@v2.0.0 # Custom action for auto approval already available on marketplace
+      # Perform the auto approve action only when the PR is raised by dependabot
       if: github.actor == 'dlevenson44'
-      run: |
-        TOKEN="${{ secrets.ACTIONS_TOKEN }}"
-        NUMBER="${{ github.event.number }}"
-        URL="https://api.github.com/repos/${{ github.repository }}/pulls/${NUMBER}/reviews"
-        DATA="{\"event\": \"APPROVE\"}"
-
-        echo "Approving PR ${NUMBER}..."
-        curl -X POST -H "Authorization: Bearer ${TOKEN}" -H "Content-Type: application/json" -d "${DATA}" "${URL}"
+      with:
+        # Create a personal access token and store it under the Secrets section of the particular repository
+        # with the key "GITHUB_ACTIONS_TOKEN"
+        github-token: ${{ secrets.ACTIONS_TOKEN }}
 
 
 # name: Auto approve and merge PRs by dependabot
