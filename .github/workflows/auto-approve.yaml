@@ -12,7 +12,7 @@ jobs:
       - uses: hmarr/auto-approve-action@v3
         with:
           review-message: "Auto approved Repo Owner's PR"
-          github-token: ${{ secrets.ACTION_TOKEN }}
+          token: ${{ secrets.ACTION_TOKEN }}
 
 # name: Auto approve PRs by dependabot
 
