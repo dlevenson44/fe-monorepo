@@ -6,7 +6,8 @@ jobs:
   auto-approve:
     runs-on: ubuntu-latest
     steps:
-      - uses: hmarr/auto-approve-action@v3
+      - name: Test name!
+        uses: hmarr/auto-approve-action@v3
         with:
           github-token: ${{ secrets.ACTIONS_TOKEN }}
         env:
