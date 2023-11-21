@@ -1,22 +1,49 @@
-name: Auto approve and merge PRs by dependabot
+name: Auto-approve Pull Requests
 
-# Trigger the workflow on pull request
 on:
-  pull_request
+  pull_request:
+    types:
+      - opened
 
 jobs:
-  autoapprove:
-    name: Auto Approve a PR by dependabot # Name of the job
-    runs-on: ubuntu-latest # Environment on which the job runs
+  auto-approve:
+    runs-on: ubuntu-latest
+
     steps:
-      - name: Auto approve
-        uses: hmarr/auto-approve-action@v2.0.0 # Custom action for auto approval already available on marketplace
-        # Perform the auto approve action only when the PR is raised by dependabot
-        if: github.actor == 'dlevenson44'
-        with:
-          # Create a personal access token and store it under the Secrets section of the particular repository
-          # with the key "GITHUB_ACTIONS_TOKEN"
-          token: ${{ secrets.ACTIONS_TOKEN }}
+    - name: Check out the code
+      uses: actions/checkout@v2
+
+    - name: Auto-approve PR from dlevenson44
+      if: github.actor == 'dlevenson44'
+      run: |
+        TOKEN="${{ secrets.ACTIONS_TOKEN }}"
+        NUMBER="${{ github.event.number }}"
+        URL="https://api.github.com/repos/${{ github.repository }}/pulls/${NUMBER}/reviews"
+        DATA="{\"event\": \"APPROVE\"}"
+
+        echo "Approving PR ${NUMBER}..."
+        curl -X POST -H "Authorization: Bearer ${TOKEN}" -H "Content-Type: application/json" -d "${DATA}" "${URL}"
+
+
+# name: Auto approve and merge PRs by dependabot
+
+# # Trigger the workflow on pull request
+# on:
+#   pull_request
+
+# jobs:
+#   autoapprove:
+#     name: Auto Approve a PR by dependabot # Name of the job
+#     runs-on: ubuntu-latest # Environment on which the job runs
+#     steps:
+#       - name: Auto approve
+#         uses: hmarr/auto-approve-action@v2.0.0 # Custom action for auto approval already available on marketplace
+#         # Perform the auto approve action only when the PR is raised by dependabot
+#         if: github.actor == 'dlevenson44'
+#         with:
+#           # Create a personal access token and store it under the Secrets section of the particular repository
+#           # with the key "GITHUB_ACTIONS_TOKEN"
+#           github-token: ${{ secrets.ACTIONS_TOKEN }}
 
 # name: Auto approve
 
