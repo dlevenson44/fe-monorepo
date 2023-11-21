@@ -1,8 +1,6 @@
 name: auto-approve
-on:
-  pull_request:
-    types:
-      - opened
+on: pull_request
+
 jobs:
   approve:
     runs-on: ubuntu-latest
