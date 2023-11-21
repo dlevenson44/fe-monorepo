@@ -15,14 +15,10 @@ jobs:
 
     - name: Auto-approve PR from dlevenson44
       if: github.actor == 'dlevenson44'
-      run: |
-        TOKEN="${{ secrets.GITHUB_TOKEN }}"
-        NUMBER="${{ github.event.number }}"
-        URL="https://api.github.com/repos/${{ github.repository }}/pulls/${NUMBER}/reviews"
-        DATA="{\"event\": \"APPROVE\"}"
-
-        echo "Approving PR ${NUMBER}..."
-        curl -X POST -H "Authorization: Bearer ${TOKEN}" -H "Content-Type: application/json" -d "${DATA}" "${URL}"
+      uses: hmarr/auto-approve-action@v3
+      with:
+        review-message: "Auto approved Repo Owner's PR"
+        github-token: ${{ secrets.ACTIONS_TOKEN }}
 
 
 # name: Auto-approve Pull Requests
