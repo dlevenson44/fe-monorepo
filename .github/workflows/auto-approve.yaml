@@ -1,0 +1,13 @@
+name: auto-approve
+on: pull_request
+
+jobs:
+  approve:
+    runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
+    if: github.actor == 'dlevenson44'
+    steps:
+      - uses: hmarr/auto-approve-action@v3
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
