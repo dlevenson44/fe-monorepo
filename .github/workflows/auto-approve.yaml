@@ -1,4 +1,4 @@
-name: Auto approve
+name: Auto Approve Repo Owner's PR
 
 on: pull_request
 
