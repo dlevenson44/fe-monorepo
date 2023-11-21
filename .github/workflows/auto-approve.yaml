@@ -1,6 +1,10 @@
 name: Auto approve
 
-on: pull_request
+on:
+  pull_request:
+    # Sequence of patterns matched against refs/heads
+    branches:    
+      - main
 
 jobs:
   auto-approve:
