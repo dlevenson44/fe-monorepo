@@ -1,9 +1,6 @@
 name: Auto-approve Pull Requests
 
-on:
-  pull_request:
-    types:
-      - opened
+on: pull_request
 
 jobs:
   auto-approve:
