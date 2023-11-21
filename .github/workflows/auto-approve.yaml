@@ -1,13 +1,28 @@
 name: Auto approve
+
 on: pull_request_target
 
 jobs:
-  build:
+  auto-approve:
     runs-on: ubuntu-latest
     permissions:
       pull-requests: write
+    if: github.actor == 'dependabot[bot]'
     steps:
       - uses: hmarr/auto-approve-action@v3
+        with:
+          review-message: "Auto approved automated PR"
+
+# name: Auto approve
+# on: pull_request_target
+
+# jobs:
+#   build:
+#     runs-on: ubuntu-latest
+#     permissions:
+#       pull-requests: write
+#     steps:
+#       - uses: hmarr/auto-approve-action@v3
 
 # name: Auto Approve Repo Owner's PR
 
