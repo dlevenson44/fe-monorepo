@@ -1,19 +1,14 @@
-name: Auto approve PRs by dependabot
+name: Auto approve
 
-# Trigger the workflow on pull request
-on:
-  pull_request
+on: pull_request_target
 
 jobs:
-  autoapprove:
-    name: Auto Approve a PR # Name of the job
-    runs-on: ubuntu-latest # Environment on which the job runs
+  auto-approve:
+    runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
+    if: github.actor == 'dlevenson44'
     steps:
-      - name: Auto approve
-        uses: hmarr/auto-approve-action@v2.0.0 # Custom action for auto approval already available on marketplace
-        # Perform the auto approve action only when the PR is raised by dependabot
-        if: github.actor == 'dlevenson44'
+      - uses: hmarr/auto-approve-action@v3
         with:
-          # Create a personal access token and store it under the Secrets section of the particular repository
-          # with the key "ACTIONS_TOKEN"
-          github-token: ${{ secrets.ACTIONS_TOKEN }}
+          review-message: "Auto approved Repo Owner's PR"
