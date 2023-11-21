@@ -11,7 +11,7 @@ jobs:
       uses: actions/checkout@v2
 
     - name: Auto approve
-      uses: hmarr/auto-approve-action@v2.0.0 # Custom action for auto approval already available on marketplace
+      uses: hmarr/auto-approve-action@v3
       # Perform the auto approve action only when the PR is raised by dependabot
       if: github.actor == 'dlevenson44'
       with:
@@ -96,10 +96,10 @@ jobs:
 #       pull-requests: write
 #     if: github.actor == 'dlevenson44'
 #     steps:
-#       - uses: hmarr/auto-approve-action@v3
-#         with:
-#           review-message: "Auto approved Repo Owner's PR"
-#           github-token: ${{ secrets.ACTIONS_TOKEN }}
+      # - uses: hmarr/auto-approve-action@v3
+      #   with:
+      #     review-message: "Auto approved Repo Owner's PR"
+      #     github-token: ${{ secrets.ACTIONS_TOKEN }}
 
 # name: Auto approve PRs by dependabot
 
