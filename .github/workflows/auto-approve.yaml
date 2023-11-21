@@ -16,7 +16,7 @@ jobs:
         with:
           # Create a personal access token and store it under the Secrets section of the particular repository
           # with the key "GITHUB_ACTIONS_TOKEN"
-          github-token: ${{ secrets.ACTIONS_TOKEN }}
+          token: ${{ secrets.ACTIONS_TOKEN }}
 
 # name: Auto approve
 
