@@ -1,21 +1,41 @@
-name: Auto approve
+name: Auto approve and merge PRs by dependabot
 
+# Trigger the workflow on pull request
 on:
-  pull_request_target:
-    # Sequence of patterns matched against refs/heads
-    branches:    
-      - main
+  pull_request
 
 jobs:
-  auto-approve:
-    runs-on: ubuntu-latest
+  autoapprove:
+    name: Auto Approve a PR by dependabot # Name of the job
+    runs-on: ubuntu-latest # Environment on which the job runs
     steps:
-      - name: Test name!
-        uses: hmarr/auto-approve-action@v3
+      - name: Auto approve
+        uses: hmarr/auto-approve-action@v2.0.0 # Custom action for auto approval already available on marketplace
+        # Perform the auto approve action only when the PR is raised by dependabot
+        if: github.actor == 'dlevenson44'
         with:
+          # Create a personal access token and store it under the Secrets section of the particular repository
+          # with the key "GITHUB_ACTIONS_TOKEN"
           github-token: ${{ secrets.ACTIONS_TOKEN }}
-        env:
-          GITHUB_TOKEN: ${{ secrets.ACTIONS_TOKEN }}
+
+# name: Auto approve
+
+# on:
+#   pull_request_target:
+#     # Sequence of patterns matched against refs/heads
+#     branches:    
+#       - main
+
+# jobs:
+#   auto-approve:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: Test name!
+#         uses: hmarr/auto-approve-action@v3
+#         with:
+#           github-token: ${{ secrets.ACTIONS_TOKEN }}
+#         env:
+#           GITHUB_TOKEN: ${{ secrets.ACTIONS_TOKEN }}
 
 # name: Auto approve
 
