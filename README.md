@@ -1,5 +1,5 @@
 # FE Monorepo
-
+test
 This is a personal monorepo project used to host NextJS applications, shared UI components, and shared UI configuration.
 
 # Requirements
