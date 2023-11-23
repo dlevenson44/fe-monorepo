@@ -21,6 +21,9 @@ importers:
       '@dev/eslint-config-custom':
         specifier: '*'
         version: link:packages/dev/eslint-config-custom
+      '@dev/tsconfig':
+        specifier: '*'
+        version: link:packages/dev/tsconfig
       commitizen:
         specifier: ~4.3.0
         version: 4.3.0(typescript@4.5.5)

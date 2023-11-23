@@ -11,6 +11,7 @@
     "devDependencies": {
         "@dev/commitizen-config-custom": "*",
         "@dev/eslint-config-custom": "*",
+        "@dev/tsconfig": "*",
         "commitizen": "~4.3.0",
         "eslint": "~8.48.0",
         "husky": "~8.0.3",
