@@ -1,6 +1,6 @@
 import * as React from 'react'
 
-export function Card({
+export default function Card({
     className,
     title,
     children,
@@ -10,7 +10,7 @@ export function Card({
     title: string
     children: React.ReactNode
     href: string
-}): JSX.Element {
+}) {
     return (
         <a
             className={className}

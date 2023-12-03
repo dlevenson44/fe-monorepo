@@ -42,6 +42,9 @@ importers:
 
   apps/docs:
     dependencies:
+      '@ui/components':
+        specifier: workspace:*
+        version: link:../../packages/ui/components
       next:
         specifier: ~13.4.19
         version: 13.4.19(react-dom@18.2.0)(react@18.2.0)
@@ -51,9 +54,6 @@ importers:
       react-dom:
         specifier: ~18.2.0
         version: 18.2.0(react@18.2.0)
-      ui:
-        specifier: workspace:*
-        version: link:../../packages/ui
     devDependencies:
       '@dev/eslint-config-custom':
         specifier: '*'
@@ -167,14 +167,14 @@ importers:
 
   packages/dev/tsconfig: {}
 
-  packages/ui:
+  packages/ui/components:
     devDependencies:
       '@dev/eslint-config-custom':
         specifier: '*'
-        version: link:../dev/eslint-config-custom
+        version: link:../../dev/eslint-config-custom
       '@dev/tsconfig':
         specifier: '*'
-        version: link:../dev/tsconfig
+        version: link:../../dev/tsconfig
       '@turbo/gen':
         specifier: ~1.10.12
         version: 1.10.12(@types/node@20.5.2)(typescript@4.5.5)
@@ -2619,6 +2619,7 @@ packages:
 
   /function-bind@1.1.1:
     resolution: {integrity: sha512-yIovAzMX49sF8Yl58fSCWJ5svSLuaibPxXQJFLmBObTuCr0Mf1KiPopGM9NiFjiYBCbfaa2Fh6breQ6ANVTI0A==}
+    dev: false
 
   /function-bind@1.1.2:
     resolution: {integrity: sha512-7XHNxH7qX9xG5mIwxkhumTox/MIRNcOgDrxWsMt2pAr23WHp6MrRlN7FBSFpCpr+oVO0F744iUgR82nJMfG2SA==}
@@ -2862,6 +2863,7 @@ packages:
     engines: {node: '>= 0.4.0'}
     dependencies:
       function-bind: 1.1.1
+    dev: false
 
   /hasown@2.0.0:
     resolution: {integrity: sha512-vUptKVTpIJhcczKBbgnS+RtcuYMB8+oNzPK2/Hp3hanz8JmpATdmmgLgSaadVREkDm+e2giHwY3ZRkyjSIDDFA==}
@@ -3090,6 +3092,7 @@ packages:
     resolution: {integrity: sha512-RECHCBCd/viahWmwj6enj19sKbHfJrddi/6cBDsNTKbNq0f7VeaUkBo60BqzvPqo/W54ChS62Z5qyun7cfOMqQ==}
     dependencies:
       has: 1.0.3
+    dev: false
 
   /is-core-module@2.13.0:
     resolution: {integrity: sha512-Z7dk6Qo8pOCp3l4tsX2C5ZVas4V+UxwQodwZhLopL91TX8UyyHEXafPcyoeeWuLrwzHcr3igO78wNLwHJHsMCQ==}
@@ -3699,7 +3702,7 @@ packages:
       isbinaryfile: 4.0.10
       lodash.get: 4.4.2
       mkdirp: 0.5.6
-      resolve: 1.22.2
+      resolve: 1.22.8
     dev: true
 
   /node-releases@2.0.14:
@@ -4334,6 +4337,7 @@ packages:
       is-core-module: 2.12.0
       path-parse: 1.0.7
       supports-preserve-symlinks-flag: 1.0.0
+    dev: false
 
   /resolve@1.22.8:
     resolution: {integrity: sha512-oKWePCxqpd6FlLvGV1VU0x7bkPmmCNolxzjMf4NczoDnQcIWrAF+cPtZn5i6n+RfD2d9i0tzpKnG6Yk168yIyw==}
