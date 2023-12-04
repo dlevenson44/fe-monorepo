@@ -79,6 +79,9 @@ importers:
 
   apps/todos:
     dependencies:
+      '@ui/components':
+        specifier: '*'
+        version: link:../../packages/ui/components
       next:
         specifier: 14.0.3
         version: 14.0.3(react-dom@18.2.0)(react@18.2.0)
@@ -168,6 +171,13 @@ importers:
   packages/dev/tsconfig: {}
 
   packages/ui/components:
+    dependencies:
+      '@ui/configuration':
+        specifier: '*'
+        version: link:../configuration
+      next:
+        specifier: ~14.0.3
+        version: 14.0.3(react-dom@18.2.0)(react@18.2.0)
     devDependencies:
       '@dev/eslint-config-custom':
         specifier: '*'
@@ -190,6 +200,21 @@ importers:
       react:
         specifier: ~18.2.0
         version: 18.2.0
+      typescript:
+        specifier: ~4.5.2
+        version: 4.5.5
+
+  packages/ui/configuration:
+    devDependencies:
+      '@dev/eslint-config-custom':
+        specifier: '*'
+        version: link:../../dev/eslint-config-custom
+      '@dev/tsconfig':
+        specifier: '*'
+        version: link:../../dev/tsconfig
+      '@types/node':
+        specifier: ~20.5.2
+        version: 20.5.2
       typescript:
         specifier: ~4.5.2
         version: 4.5.5
@@ -1490,7 +1515,6 @@ packages:
 
   /caniuse-lite@1.0.30001565:
     resolution: {integrity: sha512-xrE//a3O7TP0vaJ8ikzkD2c2NgcVUvsEe2IvFTntV4Yd1Z9FVzh+gW+enX96L0psrbaFMcVcH2l90xNuGDWc8w==}
-    dev: true
 
   /chalk@2.4.2:
     resolution: {integrity: sha512-Mti+f9lpJNcwF4tWV8/OrTTtF1gZi+f8FqlyAdouralcFWFQWF2+NgCHShjkCb+IFBLq9buZwE1xckQU4peSuQ==}
@@ -3661,7 +3685,7 @@ packages:
       '@next/env': 14.0.3
       '@swc/helpers': 0.5.2
       busboy: 1.6.0
-      caniuse-lite: 1.0.30001522
+      caniuse-lite: 1.0.30001565
       postcss: 8.4.31
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)

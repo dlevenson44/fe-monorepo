@@ -1,2 +1,3 @@
 // component exports
-export { Card } from './Card'
+export { Card } from './card'
+export { SharedRootLayout } from './root-layout'

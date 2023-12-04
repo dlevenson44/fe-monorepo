@@ -8,6 +8,10 @@
     "lint": "eslint .",
     "generate:component": "turbo gen react-component"
   },
+  "dependencies": {
+    "@ui/configuration": "*",
+    "next": "~14.0.3"
+  },
   "devDependencies": {
     "@dev/eslint-config-custom": "*",
     "@dev/tsconfig": "*",
