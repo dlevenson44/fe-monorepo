@@ -1,6 +1,6 @@
 import * as React from 'react'
 
-export function Card({
+export default function Card({
     className,
     title,
     children,
