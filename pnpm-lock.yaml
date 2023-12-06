@@ -82,6 +82,9 @@ importers:
       '@ui/components':
         specifier: '*'
         version: link:../../packages/ui/components
+      '@ui/configuration':
+        specifier: '*'
+        version: link:../../packages/ui/configuration
       next:
         specifier: 14.0.3
         version: 14.0.3(react-dom@18.2.0)(react@18.2.0)
