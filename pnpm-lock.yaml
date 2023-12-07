@@ -43,8 +43,11 @@ importers:
   apps/docs:
     dependencies:
       '@ui/components':
-        specifier: workspace:*
+        specifier: '*'
         version: link:../../packages/ui/components
+      '@ui/configuration':
+        specifier: '*'
+        version: link:../../packages/ui/configuration
       next:
         specifier: ~13.4.19
         version: 13.4.19(react-dom@18.2.0)(react@18.2.0)
@@ -73,6 +76,15 @@ importers:
       '@types/react-dom':
         specifier: ~18.0.7
         version: 18.0.11
+      autoprefixer:
+        specifier: ~10.0.1
+        version: 10.0.4(postcss@8.4.32)
+      postcss:
+        specifier: ~8
+        version: 8.4.32
+      tailwindcss:
+        specifier: ~3.3.6
+        version: 3.3.6
       typescript:
         specifier: ~4.5.3
         version: 4.5.5
@@ -206,6 +218,15 @@ importers:
       '@types/react-dom':
         specifier: ~18.2.0
         version: 18.2.3
+      autoprefixer:
+        specifier: ~10.0.1
+        version: 10.0.4(postcss@8.4.32)
+      postcss:
+        specifier: ~8
+        version: 8.4.32
+      tailwindcss:
+        specifier: ~3.3.6
+        version: 3.3.6
       typescript:
         specifier: ~4.5.2
         version: 4.5.5
