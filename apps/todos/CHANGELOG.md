@@ -4,4 +4,4 @@
 
 ### Major Changes
 
--   Creating UI for TODO app
+- Creating UI for TODO app

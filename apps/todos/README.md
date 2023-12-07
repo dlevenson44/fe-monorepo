@@ -1,1 +1,1 @@
-This is a Next.Js UI for my TODO app.  Wahoo!
+This is a Next.Js UI for my TODO app. Wahoo!
