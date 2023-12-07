@@ -1,29 +1,29 @@
 'use client'
-import { useMemo, useState } from 'react'
+import { useState, useMemo } from 'react'
 import type { FunctionComponent, FormEvent } from 'react'
 
 interface CustomStyles {
   containerStyle?: string
-  inputStyle?: string
+  textAreaStyle?: string
   labelStyle?: string
 }
 
-export interface TextInputProps {
+export interface TextAreaProps {
   name: string
   value: string
-  onChange: (e: FormEvent<HTMLInputElement>) => void
+  onChange: (e: FormEvent<HTMLTextAreaElement>) => void
   label: string
   customStyling?: CustomStyles
 }
 
-const TextInput: FunctionComponent<TextInputProps> = ({
+const TextArea: FunctionComponent<TextAreaProps> = ({
   name,
   value,
   onChange,
   label,
-  customStyling: { containerStyle, inputStyle, labelStyle } = {
+  customStyling: { containerStyle, textAreaStyle, labelStyle } = {
     containerStyle: '',
-    inputStyle: '',
+    textAreaStyle: '',
     labelStyle: '',
   },
 }) => {
@@ -39,10 +39,9 @@ const TextInput: FunctionComponent<TextInputProps> = ({
 
   return (
     <div className={`relative flex flex-col w-1/2 ${containerStyle}`}>
-      <input
-        type="text"
+      <textarea
         name={name}
-        className={`outline rounded-md w-full p-1 ${inputStyle}`}
+        className={`outline rounded-md p-1 px-2 ${textAreaStyle}`}
         value={value}
         onChange={onChange}
         onBlur={() => {
@@ -50,13 +49,13 @@ const TextInput: FunctionComponent<TextInputProps> = ({
         }}
         onFocus={() => setShrink(true)}
       />
-      <div
-        className={`absolute pointer-events-none origin-top-left transition-transform -top-5 left-3 ${responsiveLabelStyles} ${labelStyle}`}
+      <label
+        className={`absolute pointer-events-none origin-top-left transition-transform left-3 -top-5 ${responsiveLabelStyles}`}
       >
-        <label>{label}</label>
-      </div>
+        {label}
+      </label>
     </div>
   )
 }
 
-export default TextInput
+export default TextArea

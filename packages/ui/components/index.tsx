@@ -1,5 +1,9 @@
-// component exports
+// Cards
 export { Card } from './card'
-export { SharedRootLayout } from './root-layout'
+// Inputs
+export { TextArea } from './text-area'
+export type { TextAreaProps } from './text-area'
 export { TextInput } from './text-input'
 export type { TextInputProps } from './text-input'
+// Layouts
+export { SharedRootLayout } from './root-layout'
