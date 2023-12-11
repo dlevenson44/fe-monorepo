@@ -2,9 +2,10 @@
 import { useState, useMemo } from 'react'
 import type { FunctionComponent, FormEvent } from 'react'
 
-import { TextInput, TextArea } from '@ui/components'
+// import { TextInput, TextArea } from '@ui/components'
 
-// import ETextInput from './text-input'
+import TextArea from './text-area'
+import TextInput from './text-input'
 
 interface PostTaskPayload {
   title: string
@@ -39,12 +40,6 @@ const AddTodo: FunctionComponent = () => {
             onChange={(e: FormEvent<HTMLInputElement>) => handleChange(e)}
             label="Add a ToDo 123"
           />
-          {/* <ETextInput
-            name="title"
-            value={postPayload.title}
-            onChange={(e: FormEvent<HTMLInputElement>) => handleChange(e)}
-            label="Add a ToDo 123"
-          /> */}
           {/* <div className={isValidTitle ? '' : `rounded-md bg-red-600 p-1`}>
                 <p className="text-white">
                     {!isValidTitle && 'Title is over 255 characters'}

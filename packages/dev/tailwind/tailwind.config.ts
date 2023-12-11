@@ -9,6 +9,6 @@ const config: Omit<Config, 'content'> = {
       },
     },
   },
-  plugins: [],
+  plugins: [require('tailwindcss'), require('autoprefixer')],
 }
 export default config
