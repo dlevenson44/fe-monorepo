@@ -3,19 +3,19 @@ const defaultTypes = require('@digitalroute/cz-conventional-changelog-for-jira/t
 const pick = require('lodash/pick')
 
 module.exports = custom({
-    types: pick(defaultTypes, ['feat', 'fix', 'refactor', 'revert', 'chore']),
-    skipScope: true,
-    scopes: [
-        // Apps
-        'docs',
-        // Workspaces
-        'apps',
-        'components',
-        'dev',
-        // Generic
-        'build',
-        'changeset',
-        'other',
-    ],
-    jiraMode: false,
+  types: pick(defaultTypes, ['feat', 'fix', 'refactor', 'revert', 'chore']),
+  skipScope: true,
+  scopes: [
+    // Apps
+    'docs',
+    // Workspaces
+    'apps',
+    'components',
+    'dev',
+    // Generic
+    'build',
+    'changeset',
+    'other',
+  ],
+  jiraMode: false,
 })

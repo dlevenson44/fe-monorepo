@@ -17,6 +17,7 @@
   },
   "devDependencies": {
     "@dev/eslint-config-custom": "*",
+    "@dev/tailwind": "*",
     "@dev/tsconfig": "*",
     "@next/eslint-plugin-next": "~13.4.19",
     "@types/node": "~20",
