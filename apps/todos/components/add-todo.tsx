@@ -4,6 +4,8 @@ import type { FunctionComponent, FormEvent } from 'react'
 
 import { TextInput, TextArea } from '@ui/components'
 
+// import ETextInput from './text-input'
+
 interface PostTaskPayload {
   title: string
   description: string
@@ -28,7 +30,7 @@ const AddTodo: FunctionComponent = () => {
 
   console.log('payload: ', isValidTitle, postPayload)
   return (
-    <div className="flex h-screen w-1/2 flex-col items-center justify-between">
+    <div className="flex h-screen w-1/2 flex-col items-center bg-test-color justify-between">
       <div className="flex justify-center h-full w-full">
         <div className="flex flex-col justify-around items-center h-1/2 w-full p-4">
           <TextInput
@@ -37,6 +39,12 @@ const AddTodo: FunctionComponent = () => {
             onChange={(e: FormEvent<HTMLInputElement>) => handleChange(e)}
             label="Add a ToDo 123"
           />
+          {/* <ETextInput
+            name="title"
+            value={postPayload.title}
+            onChange={(e: FormEvent<HTMLInputElement>) => handleChange(e)}
+            label="Add a ToDo 123"
+          /> */}
           {/* <div className={isValidTitle ? '' : `rounded-md bg-red-600 p-1`}>
                 <p className="text-white">
                     {!isValidTitle && 'Title is over 255 characters'}

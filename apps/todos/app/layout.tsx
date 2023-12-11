@@ -1,4 +1,4 @@
-import { SharedRootLayout } from '@ui/components/'
+import { SharedRootLayout } from '@ui/components'
 import { APP_NAME, APP_DESCRIPTION } from '@ui/configuration'
 import type { Metadata } from 'next'
 import './globals.css'
