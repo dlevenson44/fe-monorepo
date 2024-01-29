@@ -4,9 +4,10 @@ on: pull_request
 jobs:
   assign:
     runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
     steps:
       - uses: hkusu/review-assign-action@v1.3.1
         with:
           reviewers: dlevenson44, dlevenson44bot
           max-num-of-reviewers: 2
-
