@@ -1,7 +1,13 @@
-name: auto-approve
+name: auto-approve-assign
 on: pull_request
 
 jobs:
+  assign:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: hkusu/review-assign-action@v1.3.1
+        with:
+          max-num-of-reviewers: 2
   approve:
     runs-on: ubuntu-latest
     permissions:
