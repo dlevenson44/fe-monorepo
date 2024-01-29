@@ -9,12 +9,4 @@ jobs:
         with:
           reviewers: dlevenson44, dlevenson44bot
           max-num-of-reviewers: 2
-  approve:
-    runs-on: ubuntu-latest
-    permissions:
-      pull-requests: write
-    if: github.actor == 'dlevenson44'
-    steps:
-      - uses: hmarr/auto-approve-action@v3
-        with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
+
