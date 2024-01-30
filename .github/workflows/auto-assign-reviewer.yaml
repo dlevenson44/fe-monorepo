@@ -10,7 +10,7 @@ jobs:
       - uses: hkusu/review-assign-action@v1.3.1
         with:
           reviewers: dlevenson44bot
-          max-num-of-reviewers: 1
+          max-num-of-reviewers: 2
       - uses: hkusu/review-assign-action@v1.3.1
         with:
             reviewers: dlevenson44
