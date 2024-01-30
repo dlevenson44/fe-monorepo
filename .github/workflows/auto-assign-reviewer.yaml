@@ -1,0 +1,16 @@
+name: auto-assign-reviewer
+on: pull_request
+
+jobs:
+  assign:
+    runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
+    steps:
+      - uses: hkusu/review-assign-action@v1.3.1
+        with:
+          reviewers: dlevenson44, simonlally
+          max-num-of-reviewers: 1
+      - uses: hkusu/review-assign-action@v1.3.1
+        with:
+          reviewers: dlevenson44bot
