@@ -6,7 +6,10 @@
         "lint": "turbo run lint",
         "format": "prettier --write \"**/*.{ts,tsx,md}\"",
         "commit": "bash commit.sh",
-        "precommit": "pnpm husky install && pnpm lint && pnpm build"
+        "precommit": "pnpm husky install && pnpm lint && pnpm build",
+        "todos:start": "turbo run dev --filter todos",
+        "todos:build": "turbo run build --filter todos",
+        "todos:lint": "turbo run lint --filter todos"
     },
     "devDependencies": {
         "@dev/commitizen-config-custom": "*",
