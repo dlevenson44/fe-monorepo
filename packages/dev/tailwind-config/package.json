@@ -1,0 +1,14 @@
+{
+  "name": "@dev/tailwind-config",
+  "version": "0.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "~20.11.20",
+    "tailwindcss": "~3.3.0",
+    "tailwindcss-radix": "~2.8.0"
+  },
+  "exports": {
+    ".": "./tailwind.config.ts"
+  }
+}
