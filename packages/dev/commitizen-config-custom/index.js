@@ -7,7 +7,7 @@ module.exports = custom({
     skipScope: true,
     scopes: [
         // Apps
-        'todos',
+        'docs',
         // Workspaces
         'apps',
         'components',
