@@ -40,6 +40,43 @@ importers:
         specifier: latest
         version: 1.13.3
 
+  apps/docs:
+    dependencies:
+      '@ui/components':
+        specifier: workspace:*
+        version: link:../../packages/ui/components
+      next:
+        specifier: ~13.4.19
+        version: 13.4.19(react-dom@18.2.0)(react@18.2.0)
+      react:
+        specifier: ~18.2.0
+        version: 18.2.0
+      react-dom:
+        specifier: ~18.2.0
+        version: 18.2.0(react@18.2.0)
+    devDependencies:
+      '@dev/eslint-config-custom':
+        specifier: '*'
+        version: link:../../packages/dev/eslint-config-custom
+      '@dev/tsconfig':
+        specifier: '*'
+        version: link:../../packages/dev/tsconfig
+      '@next/eslint-plugin-next':
+        specifier: ~13.4.19
+        version: 13.4.19
+      '@types/node':
+        specifier: ~17.0.12
+        version: 17.0.45
+      '@types/react':
+        specifier: ~18.0.0
+        version: 18.0.38
+      '@types/react-dom':
+        specifier: ~18.0.7
+        version: 18.0.11
+      typescript:
+        specifier: ~4.5.3
+        version: 4.5.5
+
   apps/storybook:
     dependencies:
       '@ui/components':
