@@ -11,10 +11,10 @@
         "storybook:dev": "turbo run dev --filter storybook",
         "storybook:lint": "turbo run lint --filter storybook",
         "storybook:start": "cd apps/storybook && pnpm run storybook",
-        "todos:dev": "turbo run dev --filter todos",
-        "todos:build": "turbo run build --filter todos",
-        "todos:lint": "turbo run lint --filter todos",
-        "todos:start": "turbo run start --filter storybook"
+        "algos:dev": "turbo run dev --filter algorithms",
+        "algos:build": "turbo run build --filter algorithms",
+        "algos:lint": "turbo run lint --filter algorithms",
+        "algos:start": "turbo run start --filter algorithms"
     },
     "devDependencies": {
         "@dev/commitizen-config-custom": "*",
@@ -41,15 +41,7 @@
         "commitizen": {
             "path": "@dev/commitizen-config-custom"
         },
-        "commitlint": {},
-        "prettier": {
-            "semi": false,
-            "singleQuote": true,
-            "trailingComma": "es5",
-            "endOfLine": "lf",
-            "printWidth": 80,
-            "tabWidth": 4
-        }
+        "commitlint": {}
     },
     "dependencies": {
         "@changesets/cli": "~2.26.2"
