@@ -2,7 +2,10 @@
   "name": "monorepo",
   "private": true,
   "scripts": {
+    "storybook:build": "turbo run build-storybook --filter storybook",
+    "storybook:dev": "turbo run storybook --filter storybook",
     "build": "turbo build",
+    "commit": "pnpm cz",
     "dev": "turbo dev",
     "lint": "turbo lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
