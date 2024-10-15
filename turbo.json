@@ -17,6 +17,7 @@
     "dev": {
       "cache": true,
       "persistent": true
-    }
+    },
+    "test": {}
   }
 }
