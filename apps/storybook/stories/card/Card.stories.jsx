@@ -1,10 +1,10 @@
 import { fn } from '@storybook/test';
 
-import { Header } from './Header';
+import { Card } from '@ui/components'
 
 export default {
-  title: 'Example/Header',
-  component: Header,
+  title: 'Example/Card',
+  component: Card,
   // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/writing-docs/autodocs
   tags: ['autodocs'],
   parameters: {
@@ -12,18 +12,16 @@ export default {
     layout: 'fullscreen',
   },
   args: {
-    onLogin: fn(),
-    onLogout: fn(),
-    onCreateAccount: fn(),
+    title: 'Card Title',
+    children: () => <p>This is a card Child</p>,
+    href: 'https://google.com'
   },
 };
 
-export const LoggedIn = {
+export const CardStory = {
   args: {
-    user: {
-      name: 'Jane Doe',
-    },
-  },
+    title: 'Card Title',
+    children: () => <p>This is a card Child</p>,
+    href: 'https://google.com'
+  }
 };
-
-export const LoggedOut = {};
