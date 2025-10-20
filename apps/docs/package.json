@@ -7,7 +7,7 @@
     "lint": "next lint --max-warnings 0",
     "check-types": "tsc --noEmit",
     "build": "storybook build",
-    "start": "storybook dev -p 6006"
+    "dev": "storybook dev -p 6006"
   },
   "dependencies": {
     "@repo/ui": "workspace:*",
