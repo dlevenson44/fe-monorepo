@@ -7,8 +7,8 @@
     "lint": "turbo run lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "check-types": "turbo run check-types",
-    "storybook-build": "turbo run build --filter=docs",
-    "storybook-dev": "turbo run dev --filter=docs"
+    "storybook:build": "turbo run build --filter=docs",
+    "storybook:dev": "turbo run dev --filter=docs"
   },
   "devDependencies": {
     "prettier": "~3.6.2",
