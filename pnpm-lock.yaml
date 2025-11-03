@@ -69,7 +69,7 @@ importers:
       '@repo/eslint-config':
         specifier: workspace:*
         version: link:../../packages/eslint-config
-      '@repo/typescript-config':
+      '@config/tsconfig':
         specifier: workspace:*
         version: link:../../packages/typescript-config
       '@storybook/addon-a11y':
@@ -136,7 +136,7 @@ importers:
       '@repo/eslint-config':
         specifier: workspace:*
         version: link:../eslint-config
-      '@repo/typescript-config':
+      '@config/tsconfig':
         specifier: workspace:*
         version: link:../typescript-config
       '@types/node':
