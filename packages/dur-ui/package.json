@@ -6,12 +6,12 @@
     "./*": "./src/*.tsx"
   },
   "scripts": {
-    "lint": "eslint . --max-warnings 0",
+    "build": "tsc",
+    "check-types": "tsc --noEmit",
     "generate:component": "turbo gen react-component",
-    "check-types": "tsc --noEmit"
+    "lint": "eslint . --max-warnings 0"
   },
   "devDependencies": {
-    "@repo/eslint-config": "workspace:*",
     "@config/tsconfig": "workspace:*",
     "@types/node": "catalog:",
     "@types/react": "catalog:",

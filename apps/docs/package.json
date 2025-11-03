@@ -16,7 +16,6 @@
   },
   "devDependencies": {
     "@chromatic-com/storybook": "~4.1.1",
-    "@repo/eslint-config": "workspace:*",
     "@config/tsconfig": "workspace:*",
     "@storybook/addon-a11y": "~9.1.13",
     "@storybook/addon-docs": "~9.1.13",
