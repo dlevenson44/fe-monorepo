@@ -9,7 +9,8 @@
     "typecheck": "turbo run typecheck",
     "storybook:build": "turbo run build --filter=docs",
     "storybook:dev": "turbo run dev --filter=docs",
-    "storybook:lint": "turbo run lint --filter=docs"
+    "storybook:lint": "turbo run lint --filter=docs",
+    "storybook:lint:fix": "turbo run lint:fix --filter=docs"
   },
   "devDependencies": {
     "@config/eslint": "workspace:*",

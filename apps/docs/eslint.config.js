@@ -1,7 +1,18 @@
-// For more info, see https://github.com/storybookjs/eslint-plugin-storybook#configuration-flat-config-format
-import storybook from "eslint-plugin-storybook";
-
-import { nextJsConfig } from "@repo/eslint-config/next-js";
+import config from '@config/eslint/eslint.config.vite.js'
 
 /** @type {import("eslint").Linter.Config[]} */
-export default nextJsConfig;
+export default [
+  ...config,
+  {
+    files: ['stories/**/*.{js,jsx,ts,tsx}'],  // Only lint src directory
+  },
+  {
+    ignores: [
+      'storybook-static/**',
+      '.storybook/**',
+      'dist/**',
+      'build/**',
+      'node_modules/**',
+    ],
+  },
+]
