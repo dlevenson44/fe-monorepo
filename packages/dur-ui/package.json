@@ -14,6 +14,7 @@
     "typecheck": "tsc --noEmit"
   },
   "devDependencies": {
+    "@config/eslint": "workspace:*",
     "@config/tsconfig": "workspace:*",
     "@types/node": "catalog:",
     "@types/react": "catalog:",

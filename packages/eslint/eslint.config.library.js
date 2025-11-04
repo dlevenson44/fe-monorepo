@@ -13,7 +13,6 @@ export default [
       react,
       'react-hooks': reactHooks,
       'jsx-a11y': jsxA11y,
-      prettier
     },
     languageOptions: {
       parserOptions: {

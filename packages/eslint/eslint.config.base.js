@@ -2,8 +2,9 @@ import js from '@eslint/js'
 import typescript from '@typescript-eslint/eslint-plugin'
 import typescriptParser from '@typescript-eslint/parser'
 import prettier from 'eslint-config-prettier'
+import prettierPlugin from 'eslint-plugin-prettier'  // ADD THIS
 import importPlugin from 'eslint-plugin-import'
-import globals from 'globals' 
+import globals from 'globals'
 
 /** @type {import('eslint').Linter.Config[]} */
 export default [
@@ -17,8 +18,6 @@ export default [
         sourceType: 'module',
       },
       globals: {
-        console: 'readonly',
-        process: 'readonly',
         ...globals.browser,
         ...globals.node,
       },
@@ -26,6 +25,7 @@ export default [
     plugins: {
       '@typescript-eslint': typescript,
       import: importPlugin,
+      prettier: prettierPlugin,  // ADD THIS
     },
     rules: {
       // TypeScript
@@ -71,8 +71,10 @@ export default [
       'no-console': ['warn', { allow: ['warn', 'error'] }],
       'prefer-const': 'error',
       'no-var': 'error',
+
+      // Makes ESLint enforce Prettier rules
+      'prettier/prettier': 'error',
     },
   },
-  // Prettier must be last to override other configs
   prettier,
 ]
