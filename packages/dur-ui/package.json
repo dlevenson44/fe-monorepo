@@ -2,14 +2,16 @@
   "name": "@repo/ui",
   "version": "0.0.0",
   "private": true,
+  "type": "module",
   "exports": {
     "./*": "./src/*.tsx"
   },
   "scripts": {
     "build": "tsc",
-    "check-types": "tsc --noEmit",
-    "generate:component": "turbo gen react-component",
-    "lint": "eslint . --max-warnings 0"
+    "dev": "tsc --watch",
+    "lint": "eslint . --max-warnings 0",
+    "lint:fix": "eslint . --fix",
+    "typecheck": "tsc --noEmit"
   },
   "devDependencies": {
     "@config/tsconfig": "workspace:*",

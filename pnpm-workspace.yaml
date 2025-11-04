@@ -1,6 +1,6 @@
 packages:
   - "apps/*"
-  - "packages/*"
+  - "packages/**/*"
 
 catalog:
   '@types/node': "~22.18.11"

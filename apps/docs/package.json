@@ -3,10 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "lint": "next lint --max-warnings 0",
-    "check-types": "tsc --noEmit",
+    "dev": "storybook dev -p 6006",
     "build": "storybook build",
-    "dev": "storybook dev -p 6006"
+    "start": "next start",
+    "lint": "next lint",
+    "lint:fix": "next lint --fix",
+    "typecheck": "tsc --noEmit"
   },
   "dependencies": {
     "@repo/ui": "workspace:*",
