@@ -2,11 +2,13 @@
   "name": "docs",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "scripts": {
-    "lint": "next lint --max-warnings 0",
-    "check-types": "tsc --noEmit",
+    "dev": "storybook dev -p 6006",
     "build": "storybook build",
-    "dev": "storybook dev -p 6006"
+    "lint": "eslint stories --max-warnings 0",
+    "lint:fix": "eslint stories --fix",
+    "typecheck": "tsc --noEmit"
   },
   "dependencies": {
     "@repo/ui": "workspace:*",
@@ -16,8 +18,8 @@
   },
   "devDependencies": {
     "@chromatic-com/storybook": "~4.1.1",
-    "@repo/eslint-config": "workspace:*",
-    "@repo/typescript-config": "workspace:*",
+    "@config/eslint": "workspace:*",
+    "@config/tsconfig": "workspace:*",
     "@storybook/addon-a11y": "~9.1.13",
     "@storybook/addon-docs": "~9.1.13",
     "@storybook/addon-onboarding": "~9.1.13",

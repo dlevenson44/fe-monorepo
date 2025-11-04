@@ -6,11 +6,16 @@
     "dev": "turbo run dev",
     "lint": "turbo run lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
-    "check-types": "turbo run check-types",
+    "typecheck": "turbo run typecheck",
     "storybook:build": "turbo run build --filter=docs",
-    "storybook:dev": "turbo run dev --filter=docs"
+    "storybook:dev": "turbo run dev --filter=docs",
+    "storybook:lint": "turbo run lint --filter=docs",
+    "storybook:lint:fix": "turbo run lint:fix --filter=docs"
   },
   "devDependencies": {
+    "@config/eslint": "workspace:*",
+    "eslint-plugin-prettier": "~5.5.4",
+    "globals": "~16.5.0",
     "prettier": "~3.6.2",
     "turbo": "~2.5.8",
     "typescript": "catalog:"
